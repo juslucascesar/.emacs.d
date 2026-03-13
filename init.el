@@ -242,6 +242,7 @@
       (append '(("\\.pdf\\'" . pdf-view-mode)) auto-mode-alist))
 
 (global-set-key (kbd "C-c p") 'pdf-view-mode)
+(add-hook 'pdf-view-mode-hook (lambda () (display-line-numbers-mode -1)))
 
 ;; (la/auc)tex
 (use-package tex
